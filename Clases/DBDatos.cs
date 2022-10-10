@@ -78,5 +78,52 @@ namespace ControlMoney.Clases
                 CerrarConexion();
             }
         }
+
+        public static DataTable Listar(string nombreProcedimiento, List<Parametro> parametros = null)
+        {
+            try
+            {
+                AbrirConexion();
+
+                SqlCommand cmd = new SqlCommand(nombreProcedimiento, conexion);
+
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                if (parametros != null)
+                {
+                    foreach (var parametro in parametros)
+                    {
+                        cmd.Parameters.AddWithValue(parametro.Nombre, parametro.Valor);
+                    }
+                }
+
+                DataTable dt = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                CerrarConexion();
+            }
+        }
+
+        public static void OcultarIds(DataGridView dataGrid)
+        {
+            foreach (DataGridViewColumn column in dataGrid.Columns)
+            {
+                if (column.Name.Substring(0, 2).ToUpper().Equals("ID"))
+                {
+                    dataGrid.Columns[column.Index].Visible = false;
+                }
+            }
+        }
     }
 }
