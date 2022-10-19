@@ -1,6 +1,6 @@
 ﻿namespace ControlMoney
 {
-    partial class Form1
+    partial class FTipoIngreso
     {
         /// <summary>
         /// Variable del diseñador necesaria.

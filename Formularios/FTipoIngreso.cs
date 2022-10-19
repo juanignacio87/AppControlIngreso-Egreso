@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ControlMoney
 {
-    public partial class Form1 : Form
+    public partial class FTipoIngreso : Form
     {
-        public Form1()
+        public FTipoIngreso()
         {
             InitializeComponent();
         }

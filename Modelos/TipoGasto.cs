@@ -8,27 +8,27 @@ using System.Threading.Tasks;
 
 namespace ControlMoney.Modelos
 {
-    internal class TipoIngreso
+    internal class TipoGasto
     {
-        public int IDTipoIngreso { get; set; }
+        public int IdTipoEgreso { get; set; }
 
         public string Denominacion { get; set; }
 
-        public static bool Guardar(TipoIngreso tipoIngreso, bool editar)
+        public static bool Guardar(TipoGasto tipoGasto, bool editar)
         {
             List<Parametro> parametros = new List<Parametro>
             {
-                new Parametro("@Denominacion", tipoIngreso.Denominacion),
-                new Parametro("@IdTipoIngreso", tipoIngreso.IDTipoIngreso),
+                new Parametro("@Denominacion", tipoGasto.Denominacion),
+                new Parametro("@IdTipoEgreso", tipoGasto.IdTipoEgreso),
                 new Parametro("@Editar", editar)
             };
 
-            return DBDatos.Ejecutar("TipoIngreso_Agregar", parametros);
+            return DBDatos.Ejecutar("TipoEgreso_Agregar", parametros);
         }
 
         public static DataTable Listar()
         {
-            return DBDatos.Listar("TipoIngreso_Listar");
+            return DBDatos.Listar("TipoEgreso_Listar");
         }
     }
 }
