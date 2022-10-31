@@ -28,32 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPrincipal));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvResumenIngresos = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtSaldo = new System.Windows.Forms.TextBox();
+            this.txtGasto = new System.Windows.Forms.TextBox();
+            this.txtIngreso = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvResumenGastos = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvIngreso = new System.Windows.Forms.DataGridView();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dgvEgreso = new System.Windows.Forms.DataGridView();
-            this.dgvResumenIngresos = new System.Windows.Forms.DataGridView();
-            this.dgvResumenGastos = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtIngreso = new System.Windows.Forms.TextBox();
-            this.txtGasto = new System.Windows.Forms.TextBox();
-            this.txtSaldo = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResumenIngresos)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResumenGastos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -62,8 +68,7 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEgreso)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResumenIngresos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResumenGastos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -82,7 +87,7 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.comboBox1.Location = new System.Drawing.Point(28, 19);
+            this.comboBox1.Location = new System.Drawing.Point(6, 19);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
@@ -109,6 +114,18 @@
             this.tabPage1.Text = "Ingresos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dgvResumenIngresos
+            // 
+            this.dgvResumenIngresos.AllowUserToAddRows = false;
+            this.dgvResumenIngresos.AllowUserToDeleteRows = false;
+            this.dgvResumenIngresos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvResumenIngresos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResumenIngresos.Location = new System.Drawing.Point(6, 6);
+            this.dgvResumenIngresos.Name = "dgvResumenIngresos";
+            this.dgvResumenIngresos.ReadOnly = true;
+            this.dgvResumenIngresos.Size = new System.Drawing.Size(364, 205);
+            this.dgvResumenIngresos.TabIndex = 7;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.txtSaldo);
@@ -125,6 +142,66 @@
             this.tabPage2.Text = "Saldo";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // txtSaldo
+            // 
+            this.txtSaldo.BackColor = System.Drawing.Color.White;
+            this.txtSaldo.Location = new System.Drawing.Point(183, 132);
+            this.txtSaldo.Name = "txtSaldo";
+            this.txtSaldo.ReadOnly = true;
+            this.txtSaldo.Size = new System.Drawing.Size(100, 20);
+            this.txtSaldo.TabIndex = 5;
+            this.txtSaldo.Text = "0";
+            this.txtSaldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtGasto
+            // 
+            this.txtGasto.BackColor = System.Drawing.Color.White;
+            this.txtGasto.Location = new System.Drawing.Point(183, 90);
+            this.txtGasto.Name = "txtGasto";
+            this.txtGasto.ReadOnly = true;
+            this.txtGasto.Size = new System.Drawing.Size(100, 20);
+            this.txtGasto.TabIndex = 4;
+            this.txtGasto.Text = "0";
+            this.txtGasto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtIngreso
+            // 
+            this.txtIngreso.BackColor = System.Drawing.Color.White;
+            this.txtIngreso.Location = new System.Drawing.Point(183, 47);
+            this.txtIngreso.Name = "txtIngreso";
+            this.txtIngreso.ReadOnly = true;
+            this.txtIngreso.Size = new System.Drawing.Size(100, 20);
+            this.txtIngreso.TabIndex = 3;
+            this.txtIngreso.Text = "0";
+            this.txtIngreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(78, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Saldo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(78, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Gastos";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(78, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ingresos";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgvResumenGastos);
@@ -136,22 +213,35 @@
             this.tabPage3.Text = "Egresos";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // dgvResumenGastos
+            // 
+            this.dgvResumenGastos.AllowUserToAddRows = false;
+            this.dgvResumenGastos.AllowUserToDeleteRows = false;
+            this.dgvResumenGastos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvResumenGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResumenGastos.Location = new System.Drawing.Point(3, 6);
+            this.dgvResumenGastos.Name = "dgvResumenGastos";
+            this.dgvResumenGastos.ReadOnly = true;
+            this.dgvResumenGastos.Size = new System.Drawing.Size(366, 205);
+            this.dgvResumenGastos.TabIndex = 7;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(198, 311);
+            this.pictureBox1.Location = new System.Drawing.Point(315, 311);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(62, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(279, 311);
+            this.pictureBox2.Location = new System.Drawing.Point(383, 311);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(61, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -160,14 +250,22 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Location = new System.Drawing.Point(28, 309);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(155, 52);
+            this.groupBox1.Size = new System.Drawing.Size(205, 52);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(133, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(65, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // dgvIngreso
             // 
@@ -225,89 +323,21 @@
             this.dgvEgreso.Size = new System.Drawing.Size(390, 205);
             this.dgvEgreso.TabIndex = 7;
             // 
-            // dgvResumenIngresos
+            // contextMenuStrip1
             // 
-            this.dgvResumenIngresos.AllowUserToAddRows = false;
-            this.dgvResumenIngresos.AllowUserToDeleteRows = false;
-            this.dgvResumenIngresos.BackgroundColor = System.Drawing.Color.White;
-            this.dgvResumenIngresos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResumenIngresos.Location = new System.Drawing.Point(6, 6);
-            this.dgvResumenIngresos.Name = "dgvResumenIngresos";
-            this.dgvResumenIngresos.ReadOnly = true;
-            this.dgvResumenIngresos.Size = new System.Drawing.Size(364, 205);
-            this.dgvResumenIngresos.TabIndex = 7;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dgvResumenGastos
+            // pictureBox3
             // 
-            this.dgvResumenGastos.AllowUserToAddRows = false;
-            this.dgvResumenGastos.AllowUserToDeleteRows = false;
-            this.dgvResumenGastos.BackgroundColor = System.Drawing.Color.White;
-            this.dgvResumenGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResumenGastos.Location = new System.Drawing.Point(3, 6);
-            this.dgvResumenGastos.Name = "dgvResumenGastos";
-            this.dgvResumenGastos.ReadOnly = true;
-            this.dgvResumenGastos.Size = new System.Drawing.Size(366, 205);
-            this.dgvResumenGastos.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(78, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingresos";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Gastos";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Saldo";
-            // 
-            // txtIngreso
-            // 
-            this.txtIngreso.BackColor = System.Drawing.Color.White;
-            this.txtIngreso.Location = new System.Drawing.Point(183, 47);
-            this.txtIngreso.Name = "txtIngreso";
-            this.txtIngreso.ReadOnly = true;
-            this.txtIngreso.Size = new System.Drawing.Size(100, 20);
-            this.txtIngreso.TabIndex = 3;
-            this.txtIngreso.Text = "0";
-            this.txtIngreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtGasto
-            // 
-            this.txtGasto.BackColor = System.Drawing.Color.White;
-            this.txtGasto.Location = new System.Drawing.Point(183, 90);
-            this.txtGasto.Name = "txtGasto";
-            this.txtGasto.ReadOnly = true;
-            this.txtGasto.Size = new System.Drawing.Size(100, 20);
-            this.txtGasto.TabIndex = 4;
-            this.txtGasto.Text = "0";
-            this.txtGasto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtSaldo
-            // 
-            this.txtSaldo.BackColor = System.Drawing.Color.White;
-            this.txtSaldo.Location = new System.Drawing.Point(183, 132);
-            this.txtSaldo.Name = "txtSaldo";
-            this.txtSaldo.ReadOnly = true;
-            this.txtSaldo.Size = new System.Drawing.Size(100, 20);
-            this.txtSaldo.TabIndex = 5;
-            this.txtSaldo.Text = "0";
-            this.txtSaldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(247, 311);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(62, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
             // 
             // FPrincipal
             // 
@@ -315,28 +345,32 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(855, 481);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Name = "FPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de Gastos";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResumenIngresos)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResumenGastos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIngreso)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEgreso)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResumenIngresos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResumenGastos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -364,5 +398,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvResumenGastos;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

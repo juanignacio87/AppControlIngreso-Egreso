@@ -125,5 +125,25 @@ namespace ControlMoney.Clases
                 }
             }
         }
+
+        public static void ListarCombo(DataTable origen, string valor, string id,ComboBox comboBox)
+        {
+            try
+            {
+                if(comboBox.Items.Count > 0)
+                {
+                    comboBox.DataSource = null;
+                    comboBox.Items.Clear();
+                }
+
+                comboBox.DataSource = origen;
+                comboBox.DisplayMember = origen.Columns[valor].ColumnName;
+                comboBox.ValueMember = origen.Columns[id].ColumnName;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
