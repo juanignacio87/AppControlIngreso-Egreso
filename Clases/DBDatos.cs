@@ -138,7 +138,7 @@ namespace ControlMoney.Clases
 
                 comboBox.DataSource = origen;
                 comboBox.DisplayMember = origen.Columns[valor].ColumnName;
-                comboBox.ValueMember = origen.Columns[id].ColumnName;
+                comboBox.ValueMember = origen.Columns[id].ColumnName; //Acá marca error cuando clickeo la picturBox con el menos --SOLUCIONADO--
             }
             catch (Exception ex)
             {

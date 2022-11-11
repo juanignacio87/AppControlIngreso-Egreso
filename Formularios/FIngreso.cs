@@ -57,7 +57,12 @@ namespace ControlMoney.Formularios
                 IdTipoIngreso = Convert.ToInt32(cboTipoIngreso.SelectedValue)
             };
 
-            return Ingreso.Agregar(ingreso, Editar);
+            if (Ingreso.Agregar(ingreso, Editar))
+            {
+                MessageBox.Show("Operación correcta");
+                return true;
+            }
+            else return false;
         }
 
         private void btnTipoIngreso_Click(object sender, EventArgs e)

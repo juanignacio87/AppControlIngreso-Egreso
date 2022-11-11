@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ControlMoney.Modelos
 {
@@ -29,6 +30,11 @@ namespace ControlMoney.Modelos
         public static DataTable Listar()
         {
             return DBDatos.Listar("TipoEgreso_Listar");
+        }
+
+        public static void ListarCombo(ComboBox comboBox)
+        {
+            DBDatos.ListarCombo(Listar(), "Denominacion", "IdTipoEgreso", comboBox);
         }
     }
 }
