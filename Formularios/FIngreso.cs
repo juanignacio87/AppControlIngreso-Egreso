@@ -20,10 +20,16 @@ namespace ControlMoney.Formularios
 
         public int IdIngreso;
         public bool Editar;
+        public string tipo;
 
         private void FIngreso_Load(object sender, EventArgs e)
         {
+            btnGuardar.Text = Editar ? "Actualizar" : "Agregar";
             ListarCombo();
+            if (Editar)
+            {
+                cboTipoIngreso.Text = tipo;
+            }
         }
 
         private void ListarCombo()

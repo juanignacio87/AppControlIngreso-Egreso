@@ -20,10 +20,17 @@ namespace ControlMoney.Formularios
 
         public int IdEgreso;
         public bool Editar;
+        public string tipo;
 
         private void FGastos_Load(object sender, EventArgs e)
         {
+            btnGuardar.Text = Editar ? "Actualizar" : "Agregar";
             ListarCombo();
+
+            if (Editar)
+            {
+                cboTipoGasto.Text = tipo;
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

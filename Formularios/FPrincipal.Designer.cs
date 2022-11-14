@@ -48,8 +48,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtAño = new System.Windows.Forms.TextBox();
             this.dgvMovimiento = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnBuscar = new System.Windows.Forms.PictureBox();
+            this.pbMercadoPago = new System.Windows.Forms.PictureBox();
+            this.pbLinkedIn = new System.Windows.Forms.PictureBox();
+            this.pbGitHub = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editarMovimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResumenIngresos)).BeginInit();
@@ -61,6 +65,10 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMovimiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMercadoPago)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLinkedIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGitHub)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cboMes
@@ -110,6 +118,7 @@
             // 
             this.dgvResumenIngresos.AllowUserToAddRows = false;
             this.dgvResumenIngresos.AllowUserToDeleteRows = false;
+            this.dgvResumenIngresos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvResumenIngresos.BackgroundColor = System.Drawing.Color.White;
             this.dgvResumenIngresos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResumenIngresos.Location = new System.Drawing.Point(6, 6);
@@ -209,6 +218,7 @@
             // 
             this.dgvResumenGastos.AllowUserToAddRows = false;
             this.dgvResumenGastos.AllowUserToDeleteRows = false;
+            this.dgvResumenGastos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvResumenGastos.BackgroundColor = System.Drawing.Color.White;
             this.dgvResumenGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResumenGastos.Location = new System.Drawing.Point(3, 6);
@@ -221,7 +231,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(138, 373);
+            this.pictureBox1.Location = new System.Drawing.Point(28, 373);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(62, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -233,7 +243,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(206, 373);
+            this.pictureBox2.Location = new System.Drawing.Point(109, 373);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(61, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -245,7 +255,7 @@
             // 
             this.groupBox1.Controls.Add(this.txtAño);
             this.groupBox1.Controls.Add(this.cboMes);
-            this.groupBox1.Location = new System.Drawing.Point(469, 371);
+            this.groupBox1.Location = new System.Drawing.Point(431, 360);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(205, 52);
             this.groupBox1.TabIndex = 5;
@@ -267,22 +277,18 @@
             this.dgvMovimiento.AllowUserToDeleteRows = false;
             this.dgvMovimiento.BackgroundColor = System.Drawing.Color.White;
             this.dgvMovimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMovimiento.ContextMenuStrip = this.contextMenuStrip2;
             this.dgvMovimiento.Location = new System.Drawing.Point(431, 47);
             this.dgvMovimiento.Name = "dgvMovimiento";
             this.dgvMovimiento.ReadOnly = true;
             this.dgvMovimiento.Size = new System.Drawing.Size(412, 297);
             this.dgvMovimiento.TabIndex = 6;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(709, 373);
+            this.btnBuscar.Location = new System.Drawing.Point(660, 362);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(62, 50);
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -290,18 +296,75 @@
             this.btnBuscar.TabStop = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // pbMercadoPago
+            // 
+            this.pbMercadoPago.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMercadoPago.Image = ((System.Drawing.Image)(resources.GetObject("pbMercadoPago.Image")));
+            this.pbMercadoPago.Location = new System.Drawing.Point(807, 436);
+            this.pbMercadoPago.Name = "pbMercadoPago";
+            this.pbMercadoPago.Size = new System.Drawing.Size(40, 40);
+            this.pbMercadoPago.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMercadoPago.TabIndex = 10;
+            this.pbMercadoPago.TabStop = false;
+            this.pbMercadoPago.Click += new System.EventHandler(this.pbMercadoPago_Click);
+            // 
+            // pbLinkedIn
+            // 
+            this.pbLinkedIn.BackColor = System.Drawing.Color.Transparent;
+            this.pbLinkedIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbLinkedIn.Image = ((System.Drawing.Image)(resources.GetObject("pbLinkedIn.Image")));
+            this.pbLinkedIn.Location = new System.Drawing.Point(761, 436);
+            this.pbLinkedIn.Name = "pbLinkedIn";
+            this.pbLinkedIn.Size = new System.Drawing.Size(40, 40);
+            this.pbLinkedIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLinkedIn.TabIndex = 11;
+            this.pbLinkedIn.TabStop = false;
+            this.pbLinkedIn.Click += new System.EventHandler(this.pbLinkedIn_Click);
+            // 
+            // pbGitHub
+            // 
+            this.pbGitHub.BackColor = System.Drawing.Color.Transparent;
+            this.pbGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbGitHub.Image = ((System.Drawing.Image)(resources.GetObject("pbGitHub.Image")));
+            this.pbGitHub.Location = new System.Drawing.Point(715, 436);
+            this.pbGitHub.Name = "pbGitHub";
+            this.pbGitHub.Size = new System.Drawing.Size(40, 40);
+            this.pbGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbGitHub.TabIndex = 12;
+            this.pbGitHub.TabStop = false;
+            this.pbGitHub.Tag = "GitHub";
+            this.pbGitHub.Click += new System.EventHandler(this.pbGitHub_Click);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editarMovimientoToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(173, 26);
+            // 
+            // editarMovimientoToolStripMenuItem
+            // 
+            this.editarMovimientoToolStripMenuItem.Name = "editarMovimientoToolStripMenuItem";
+            this.editarMovimientoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarMovimientoToolStripMenuItem.Text = "Editar Movimiento";
+            this.editarMovimientoToolStripMenuItem.Click += new System.EventHandler(this.editarMovimientoToolStripMenuItem_Click);
+            // 
             // FPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(855, 481);
+            this.Controls.Add(this.pbGitHub);
+            this.Controls.Add(this.pbLinkedIn);
+            this.Controls.Add(this.pbMercadoPago);
             this.Controls.Add(this.dgvMovimiento);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Control de Gastos";
@@ -319,6 +382,10 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMovimiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMercadoPago)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLinkedIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGitHub)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -343,7 +410,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvResumenGastos;
         private System.Windows.Forms.TextBox txtAño;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.PictureBox btnBuscar;
+        private System.Windows.Forms.PictureBox pbMercadoPago;
+        private System.Windows.Forms.PictureBox pbLinkedIn;
+        private System.Windows.Forms.PictureBox pbGitHub;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem editarMovimientoToolStripMenuItem;
     }
 }
