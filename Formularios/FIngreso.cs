@@ -57,7 +57,7 @@ namespace ControlMoney.Formularios
             Ingreso ingreso = new Ingreso
             {
                 Descripcion = txtDescripcion.Text,
-                Fecha = dtpFecha.Value.ToShortDateString(),
+                Fecha = dtpFecha.Value.ToString("yyyy-MM-dd"),
                 Monto = Convert.ToDecimal(txtMonto.Text),
                 IdIngreso = IdIngreso,
                 IdTipoIngreso = Convert.ToInt32(cboTipoIngreso.SelectedValue)

@@ -45,7 +45,7 @@ namespace ControlMoney.Formularios
             Gasto gasto = new Gasto
             {
                 Descripcion = txtDescripcion.Text,
-                Fecha = dtpFecha.Value.ToShortDateString(),
+                Fecha = dtpFecha.Value.ToString("yyyy-MM-dd"),
                 Monto = Convert.ToDecimal(txtMonto.Text),
                 IdEgreso = IdEgreso,
                 IdTipoEgreso = Convert.ToInt32(cboTipoGasto.SelectedValue)

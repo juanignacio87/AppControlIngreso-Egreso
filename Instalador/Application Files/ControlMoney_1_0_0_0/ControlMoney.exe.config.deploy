@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8" />
+    </startup>
+
+	<connectionStrings>
+		<add name="stringConexion" 
+			 connectionString="Data Source=DESKTOP-0UFQSDQ;Initial Catalog=ControlMoney;User ID=sa;Password=TedBoldo87" 
+			 providerName="System.Data.SqlClient"/>
+	</connectionStrings>
+</configuration>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ControlMoney.exe" version="1.0.0.0" publicKeyToken="8a401fbffe658156" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="wallet-solid.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ControlMoney" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ControlMoney.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opciones del manifiesto de Control de cuentas de usuario
+          Si quiere cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el
+          nodo requestedExecutionLevel por alguno de los siguientes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Si desea usar la virtualización de archivos y del Registro para la
+         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlMoney.exe" size="128480">
+      <assemblyIdentity name="ControlMoney" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>hPBGNs+LTYpCBgrnwIrdSZPzdd39tGY1Hjeqgq2jrvY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ControlMoney.exe.config" size="422">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>V1MpMRv3hN0RNRV354qM2sc6x8dkqug4aOxGg3ARQ3w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="wallet-solid.ico" size="6088">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KRjQDEANdloYk1orI1pXKdiVgz8ZvipH3EkBjpvb2Hk=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-0UFQSDQ\juani" issuerKeyHash="5a07abddd83a0623758b351227d5b9d33f23cd5c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>WGP13r8G06EEfQFWSX0nfGtLylyi0EjMANtYwkyjwpM=</DigestValue></Reference></SignedInfo><SignatureValue>0ufh0PY2AjJ7ll5LNZbQdxyArFbBvnCt+1ySLgZaRGnAYuWdeOvWJiSC9tYkglBX3wJnGzs8O4TVBw8hi/tt7pxzJdLqt9JOVSxW3RbGdm6jPpdcjwA0az2oMcERSdpYkD3JEjQPupKKVegkHHW9Bu719lueyfDbsMEqWTawTH4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>4hc+4xqZHQbnVe3pF5Sq6DMaybgeQW4I+3KMjDkeShueIdN6awPc3semtVgtW+TViTw/jo8XXq6XSPqsGuVcGdbOKzDOq1bi9rJ/HoX0xsSiQ/KH4tkScDJzaEgjKXWpAZeLAZsJkEn0C+sCby+ynZRS/bwRnj8k4eJbB1RD/6U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="93c2a34cc258db00cc48d0a25cca4b6b7c277d4956017d04a1d306bfdef56358" Description="" Url=""><as:assemblyIdentity name="ControlMoney.exe" version="1.0.0.0" publicKeyToken="8a401fbffe658156" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-0UFQSDQ\juani</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>qxACkV0qQdxSXLxgLXTRVqL778Igv1fml6lvw5S7IU8=</DigestValue></Reference></SignedInfo><SignatureValue>HK41M4S2tGQ7XZob91VUJwQ4svyEkkR2sAWAzKebxm5icLfoLhQlJlskCmyxcTBlsoFva094bUMGSi/y6zSITcCncHwzhFtottuG9jt5jdB59FyDdiUGrI+/zDd8LWQ1ORoRh9iFlKOMgUTLqVrD9psCEhR1NIjx5herJrYouac=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>4hc+4xqZHQbnVe3pF5Sq6DMaybgeQW4I+3KMjDkeShueIdN6awPc3semtVgtW+TViTw/jo8XXq6XSPqsGuVcGdbOKzDOq1bi9rJ/HoX0xsSiQ/KH4tkScDJzaEgjKXWpAZeLAZsJkEn0C+sCby+ynZRS/bwRnj8k4eJbB1RD/6U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQPQC0i1R1V5VOsZ8/bZ4xjzANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADAAVQBGAFEAUwBEAFEAXABqAHUAYQBuAGkwHhcNMjIxMTMwMTgyNDQ1WhcNMjMxMjAxMDAyNDQ1WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADAAVQBGAFEAUwBEAFEAXABqAHUAYQBuAGkwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAOIXPuMamR0G51Xt6ReUqugzGsm4HkFuCPtyjIw5HkobniHTemsD3N7HprVYLVvk1Yk8P46PF16ul0j6rBrlXBnWziswzqtW4vayfx6F9MbEokPyh+LZEnAyc2hIIyl1qQGXiwGbCZBJ9AvrAm8vsp2UUv28EZ4/JOHiWwdUQ/+lAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAdfXX2yLJmS0qpxI6FW7ucBcO2i3e0QnbiZB4I2Qkl/tNdNCr2D7gWY0vwNtBPg1hce0A8OvoavrcyHZ51naRBKXY7Zx5DlprJ7WbzazK1bpJDgFojucTXZArdFRB7R2GFHE+Zb6aCP3aZJkgephk7kIAgxdFfzhh/SCQPtXNYqk=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

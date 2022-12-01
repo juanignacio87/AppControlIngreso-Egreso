@@ -83,5 +83,10 @@ namespace ControlMoney
             txtIngreso.Text = dgvDatos.CurrentRow.Cells["Denominacion"].Value.ToString();
             Editar = true;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
     }
 }
